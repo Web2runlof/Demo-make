@@ -1,0 +1,145 @@
+<!doctype html>
+<html lang="es-CO">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Declaración de accesibilidad | Alcaldía de Springfield</title>
+  <meta name="description" content="Funciones de accesibilidad del portal de la Alcaldía de Springfield.">
+  <meta name="robots" content="noindex">
+  <link rel="icon" href="assets/img/escudo.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;800&family=Work+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body>
+  <a class="saltar" href="#contenido">Saltar al contenido principal</a>
+
+  <aside class="barra-demo" aria-label="Aviso del sitio">
+    <div class="contenedor">
+      <span><strong>SITIO DE DEMOSTRACIÓN ACADÉMICA.</strong> Springfield es un municipio ficticio; este portal no pertenece a ninguna entidad pública real.</span>
+      <a href="accesibilidad.html">Accesibilidad</a>
+    </div>
+  </aside>
+
+  <header class="encabezado">
+    <div class="contenedor">
+      <a class="marca" href="index.html">
+        <img src="assets/img/escudo.svg" alt="" width="56" height="65">
+        <span class="marca-texto">
+          <small>Alcaldía Municipal de</small>
+          <span>Springfield</span>
+          <em>Springfield, territorio que avanza · 2024–2027</em>
+        </span>
+      </a>
+      <form class="buscador" id="form-buscar" role="search" action="index.html" method="get">
+        <label class="visualmente-oculto" for="q">Buscar trámites y servicios</label>
+        <input id="q" name="q" type="search" placeholder="Buscar trámites y servicios" autocomplete="off">
+        <button type="submit">Buscar</button>
+      </form>
+    </div>
+  </header>
+
+  <nav class="menu" aria-label="Menú principal">
+    <div class="contenedor">
+      <button class="menu-boton" type="button" aria-expanded="false" aria-controls="menu-principal">
+        <span aria-hidden="true">☰</span> Menú
+      </button>
+      <ul id="menu-principal">
+          <li><a href="index.html">Inicio</a></li>
+          <li><a href="index.html#municipio">Nuestro municipio</a></li>
+          <li><a href="transparencia.html">Transparencia y acceso a la información pública</a></li>
+          <li><a href="pqrsd.html">Atención y servicios a la ciudadanía</a></li>
+          <li><a href="index.html#participa">Participa</a></li>
+          <li><a href="index.html#noticias">Noticias</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <nav class="migas" aria-label="Ruta de navegación">
+    <div class="contenedor"><ol><li><a href="index.html">Inicio</a></li><li><span aria-current="page">Declaración de accesibilidad</span></li></ol></div>
+  </nav>
+
+  <main id="contenido" tabindex="-1">
+    <div class="cabecera-pagina">
+      <div class="contenedor">
+        <h1>Declaración de accesibilidad</h1>
+        <p>Este sitio se diseñó siguiendo el Anexo 1 de la Resolución 1519 de 2020 del MinTIC y las Pautas de Accesibilidad para el Contenido Web (WCAG) 2.1, nivel AA.</p>
+      </div>
+    </div>
+    <section class="seccion" aria-labelledby="titulo-funciones">
+      <div class="contenedor" style="max-width:860px">
+        <h2 id="titulo-funciones">Qué puede hacer en este sitio</h2>
+        <ul>
+          <li><strong>Saltar al contenido:</strong> al presionar la tecla Tab por primera vez aparece un enlace para ir directo al contenido principal.</li>
+          <li><strong>Navegar solo con teclado:</strong> todos los enlaces, botones y campos se usan con Tab, Mayús + Tab, Enter, Espacio y las flechas. El elemento activo se resalta con un borde amarillo y azul.</li>
+          <li><strong>Ampliar el texto</strong> hasta el 200 % con los botones A+ y A− de la barra lateral, o con el zoom del navegador, sin perder contenido.</li>
+          <li><strong>Alto contraste:</strong> fondo negro con texto blanco y amarillo. La preferencia se recuerda en este navegador.</li>
+          <li><strong>Formularios claros:</strong> cada campo tiene su etiqueta, un ejemplo y un mensaje de error que explica cómo corregirlo. Al enviar, un resumen lista los errores con enlaces a cada campo.</li>
+          <li><strong>Lectores de pantalla:</strong> el sitio usa encabezados, regiones y avisos dinámicos (por ejemplo, el plazo de respuesta y el estado del envío) que se leen automáticamente.</li>
+          <li><strong>Respuesta en formato accesible:</strong> en la PQRSD puede pedir la respuesta en letra grande, audio, Lengua de Señas Colombiana, braille, lectura fácil o lengua nativa.</li>
+        </ul>
+        <h2>¿Encontró una barrera?</h2>
+        <p>Cuéntenos qué página y qué elemento le causó dificultad. Lo trataremos como una sugerencia con prioridad.</p>
+        <p><a class="boton boton-primario" href="pqrsd.html?tipo=sugerencia">Reportar una barrera de accesibilidad</a></p>
+      </div>
+    </section>
+  </main>
+
+  <aside aria-label="Herramientas de accesibilidad">
+  <div class="accesibilidad" role="toolbar" aria-label="Opciones de accesibilidad" aria-orientation="vertical">
+    <button type="button" id="acc-contraste" data-acc="contraste" aria-pressed="false" title="Alto contraste">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9" fill="none" stroke="currentColor" stroke-width="2"/><path d="M12 3a9 9 0 0 1 0 18z" fill="currentColor"/></svg>
+      <span class="visualmente-oculto">Alto contraste</span>
+    </button>
+    <button type="button" data-acc="mas" title="Aumentar texto"><span aria-hidden="true">A+</span><span class="visualmente-oculto">Aumentar tamaño del texto</span></button>
+    <button type="button" data-acc="menos" title="Reducir texto"><span aria-hidden="true">A−</span><span class="visualmente-oculto">Reducir tamaño del texto</span></button>
+    <button type="button" data-acc="restablecer" title="Restablecer">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M3 12a9 9 0 1 0 3-6.7L3 8"/><path d="M3 3v5h5"/></svg>
+      <span class="visualmente-oculto">Restablecer visualización</span>
+    </button>
+  </div>
+  <div id="anuncio-accesibilidad" class="visualmente-oculto" role="status" aria-live="polite"></div>
+  </aside>
+
+  <footer class="pie">
+    <div class="contenedor">
+      <div class="pie-grilla">
+        <section aria-labelledby="pie-entidad">
+          <h2 id="pie-entidad">Alcaldía Municipal de Springfield</h2>
+          <address>
+            Carrera 5 n.º 4-20, Plaza Principal, Springfield (municipio ficticio), Colombia<br>
+            Horario de atención: lunes a viernes, 7:30 a. m. a 12:00 m. y 2:00 p. m. a 5:30 p. m.<br>
+            Conmutador: <a href="tel:+576015550100">(601) 555 0100</a> · Línea gratuita: 01 8000 555 010<br>
+            Correo institucional: <a href="mailto:atencion@springfield.example">atencion@springfield.example</a><br>
+            Notificaciones judiciales: <a href="mailto:notificaciones@springfield.example">notificaciones@springfield.example</a>
+          </address>
+        </section>
+        <section aria-labelledby="pie-mapa">
+          <h2 id="pie-mapa">Mapa del sitio</h2>
+          <ul>
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="transparencia.html">Transparencia y acceso a la información pública</a></li>
+            <li><a href="pqrsd.html">Radicar PQRSD</a></li>
+            <li><a href="accesibilidad.html">Declaración de accesibilidad</a></li>
+          </ul>
+        </section>
+        <section aria-labelledby="pie-politicas">
+          <h2 id="pie-politicas">Políticas</h2>
+          <ul>
+            <li><a href="transparencia.html#datos-personales">Política de tratamiento de datos personales</a></li>
+            <li><a href="transparencia.html#terminos">Términos y condiciones</a></li>
+            <li><a href="accesibilidad.html">Política de accesibilidad</a></li>
+          </ul>
+        </section>
+      </div>
+      <div class="pie-final">
+        <span>Contenido ficticio creado con fines académicos para una demostración de automatización con Make.</span>
+        <span>Última actualización: noviembre de 2026</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="assets/js/sitio.js" defer></script>
+</body>
+</html>

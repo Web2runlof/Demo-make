@@ -1,0 +1,268 @@
+<!doctype html>
+<html lang="es-CO">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Inicio | Alcaldía de Springfield</title>
+  <meta name="description" content="Portal de demostración de la Alcaldía Municipal de Springfield: trámites, PQRSD en línea, transparencia y noticias.">
+  <meta name="robots" content="noindex">
+  <link rel="icon" href="assets/img/escudo.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;800&family=Work+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body>
+  <a class="saltar" href="#contenido">Saltar al contenido principal</a>
+
+  <aside class="barra-demo" aria-label="Aviso del sitio">
+    <div class="contenedor">
+      <span><strong>SITIO DE DEMOSTRACIÓN ACADÉMICA.</strong> Springfield es un municipio ficticio; este portal no pertenece a ninguna entidad pública real.</span>
+      <a href="accesibilidad.html">Accesibilidad</a>
+    </div>
+  </aside>
+
+  <header class="encabezado">
+    <div class="contenedor">
+      <a class="marca" href="index.html">
+        <img src="assets/img/escudo.svg" alt="" width="56" height="65">
+        <span class="marca-texto">
+          <small>Alcaldía Municipal de</small>
+          <span>Springfield</span>
+          <em>Springfield, territorio que avanza · 2024–2027</em>
+        </span>
+      </a>
+      <form class="buscador" id="form-buscar" role="search" action="index.html" method="get">
+        <label class="visualmente-oculto" for="q">Buscar trámites y servicios</label>
+        <input id="q" name="q" type="search" placeholder="Buscar trámites y servicios" autocomplete="off">
+        <button type="submit">Buscar</button>
+      </form>
+    </div>
+  </header>
+
+  <nav class="menu" aria-label="Menú principal">
+    <div class="contenedor">
+      <button class="menu-boton" type="button" aria-expanded="false" aria-controls="menu-principal">
+        <span aria-hidden="true">☰</span> Menú
+      </button>
+      <ul id="menu-principal">
+          <li><a href="index.html" aria-current="page">Inicio</a></li>
+          <li><a href="index.html#municipio">Nuestro municipio</a></li>
+          <li><a href="transparencia.html">Transparencia y acceso a la información pública</a></li>
+          <li><a href="pqrsd.html">Atención y servicios a la ciudadanía</a></li>
+          <li><a href="index.html#participa">Participa</a></li>
+          <li><a href="index.html#noticias">Noticias</a></li>
+      </ul>
+    </div>
+  </nav>
+
+
+  <main id="contenido" tabindex="-1">
+    <section class="heroe" aria-labelledby="titulo-heroe">
+      <div class="contenedor">
+        <div>
+          <span class="heroe-etiqueta">Atención y servicios a la ciudadanía</span>
+          <h1 id="titulo-heroe">Su Alcaldía, a un clic y sin filas</h1>
+          <p class="lead">Radique peticiones, quejas, reclamos, sugerencias y denuncias desde cualquier dispositivo. Le damos un número de radicado de inmediato y le respondemos dentro de los plazos de ley.</p>
+          <div class="acciones">
+            <a class="boton boton-primario" href="pqrsd.html">Radicar una PQRSD</a>
+            <a class="boton boton-secundario" href="#tramites">Ver trámites y servicios</a>
+          </div>
+        </div>
+        <div class="heroe-imagen">
+          <img src="assets/img/hero-plaza.svg" alt="Ilustración de la plaza principal de Springfield con el edificio de la Alcaldía, su torre del reloj y ciudadanos caminando." width="800" height="460">
+        </div>
+      </div>
+    </section>
+
+    <section class="seccion" id="tramites" tabindex="-1" aria-labelledby="titulo-tramites">
+      <div class="contenedor">
+        <div class="seccion-titulo">
+          <div>
+            <h2 id="titulo-tramites">Trámites y servicios</h2>
+            <p>Los servicios marcados «En línea» funcionan en este sitio de demostración.</p>
+          </div>
+        </div>
+        <div id="resultado-busqueda" class="visualmente-oculto" role="status" aria-live="polite"></div>
+        <ul class="grilla" role="list" style="list-style:none;padding:0;margin:0">
+          <li class="tarjeta tarjeta-destacada" data-tramite="pqrs pqrsd peticion queja reclamo sugerencia denuncia radicar">
+            <span class="icono"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 3H6a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V9z"/><path d="M14 3v6h6M8 13h8M8 17h5"/></svg></span>
+            <span class="etiqueta etiqueta-linea">En línea</span>
+            <h3>Radicar una PQRSD</h3>
+            <p>Presente peticiones, quejas, reclamos, sugerencias o denuncias y reciba su número de radicado al instante.</p>
+            <a class="enlace-tarjeta" href="pqrsd.html">Radicar ahora <span aria-hidden="true">→</span></a>
+          </li>
+          <li class="tarjeta" data-tramite="informacion publica transparencia documentos ley 1712">
+            <span class="icono"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 11v6M12 7.5v.5"/></svg></span>
+            <span class="etiqueta etiqueta-linea">En línea</span>
+            <h3>Solicitud de información pública</h3>
+            <p>Pida documentos o datos que tenga la Alcaldía, conforme a la Ley 1712 de 2014.</p>
+            <a class="enlace-tarjeta" href="pqrsd.html?tipo=informacion">Solicitar información <span aria-hidden="true">→</span></a>
+          </li>
+          <li class="tarjeta" data-tramite="denuncia corrupcion anonima">
+            <span class="icono"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round" aria-hidden="true"><path d="M12 3 4 6v6c0 5 3.5 8 8 9 4.5-1 8-4 8-9V6z"/><path d="m9 12 2 2 4-4"/></svg></span>
+            <span class="etiqueta etiqueta-linea">En línea</span>
+            <h3>Denuncias por corrupción</h3>
+            <p>Informe hechos irregulares de servidores o contratistas. Puede hacerlo de forma anónima.</p>
+            <a class="enlace-tarjeta" href="pqrsd.html?tipo=denuncia">Presentar denuncia <span aria-hidden="true">→</span></a>
+          </li>
+          <li class="tarjeta" data-tramite="impuesto predial pago factura hacienda">
+            <span class="icono"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><rect x="3" y="6" width="18" height="12" rx="2"/><path d="M3 10h18M7 15h4"/></svg></span>
+            <span class="etiqueta">Trámite de ejemplo</span>
+            <h3>Impuesto predial unificado</h3>
+            <p>Consulte el valor a pagar y los descuentos por pronto pago de su predio.</p>
+            
+          </li>
+          <li class="tarjeta" data-tramite="certificado residencia vecindad gobierno">
+            <span class="icono"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round" aria-hidden="true"><path d="m3 11 9-7 9 7"/><path d="M5 10v10h14V10M10 20v-6h4v6"/></svg></span>
+            <span class="etiqueta">Trámite de ejemplo</span>
+            <h3>Certificado de residencia</h3>
+            <p>Documento que acredita que usted vive en el municipio de Springfield.</p>
+            
+          </li>
+          <li class="tarjeta" data-tramite="licencia construccion obra planeacion">
+            <span class="icono"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round" aria-hidden="true"><path d="M4 20h16M6 20V9l6-5 6 5v11"/><path d="M10 20v-5h4v5"/></svg></span>
+            <span class="etiqueta">Trámite de ejemplo</span>
+            <h3>Licencia de construcción</h3>
+            <p>Requisitos para construir, ampliar o modificar una edificación.</p>
+            
+          </li>
+          <li class="tarjeta" data-tramite="sisben encuesta programas sociales">
+            <span class="icono"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="9" cy="8" r="3"/><circle cx="17" cy="9" r="2.5"/><path d="M3 20c0-3.3 2.7-6 6-6s6 2.7 6 6M15 14.5c3 0 6 2 6 5"/></svg></span>
+            <span class="etiqueta">Trámite de ejemplo</span>
+            <h3>Encuesta Sisbén</h3>
+            <p>Solicite la encuesta o la actualización de sus datos en el Sisbén.</p>
+            
+          </li>
+          <li class="tarjeta" data-tramite="programas sociales adulto mayor discapacidad primera infancia subsidio">
+            <span class="icono"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M9 6h11M9 12h11M9 18h11M4 6h.01M4 12h.01M4 18h.01"/></svg></span>
+            <span class="etiqueta">Trámite de ejemplo</span>
+            <h3>Inscripción a programas sociales</h3>
+            <p>Adulto mayor, primera infancia y apoyos para personas con discapacidad.</p>
+            
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="seccion seccion-alt" id="municipio" aria-labelledby="titulo-municipio">
+      <div class="contenedor">
+        <div class="seccion-titulo">
+          <div>
+            <h2 id="titulo-municipio">Nuestro municipio</h2>
+            <p>Springfield es un municipio de clima templado, rodeado de montañas y atravesado por el río Claro. Su economía combina la agricultura familiar, el comercio y el turismo de naturaleza.</p>
+          </div>
+        </div>
+        <dl class="cifras">
+          <div class="cifra"><dt>Habitantes</dt><dd>48.320</dd></div>
+          <div class="cifra"><dt>Veredas</dt><dd>27</dd></div>
+          <div class="cifra"><dt>Altitud (m s. n. m.)</dt><dd>1.640</dd></div>
+          <div class="cifra"><dt>Temperatura media</dt><dd>19 °C</dd></div>
+        </dl>
+      </div>
+    </section>
+
+    <section class="seccion" id="noticias" aria-labelledby="titulo-noticias">
+      <div class="contenedor">
+        <div class="seccion-titulo">
+          <h2 id="titulo-noticias">Noticias</h2>
+        </div>
+        <ul class="grilla" role="list" style="list-style:none;padding:0;margin:0">
+          <li class="noticia">
+            <img src="assets/img/noticia-vias.svg" alt="" width="400" height="225">
+            <div class="noticia-cuerpo">
+              <time datetime="2026-11-04">4 de noviembre de 2026</time>
+              <h3>Inicia la pavimentación de la vía a la vereda El Retiro</h3>
+              <p>La obra de 3,2 kilómetros beneficiará a cerca de 600 familias campesinas y estará lista en el primer semestre de 2027.</p>
+            </div>
+          </li>
+          <li class="noticia">
+            <img src="assets/img/noticia-mercado.svg" alt="" width="400" height="225">
+            <div class="noticia-cuerpo">
+              <time datetime="2026-10-30">30 de octubre de 2026</time>
+              <h3>Vuelve el Mercado Campesino a la Plaza Principal</h3>
+              <p>Cada último sábado del mes, productores locales venden frutas, verduras y lácteos sin intermediarios.</p>
+            </div>
+          </li>
+          <li class="noticia">
+            <img src="assets/img/noticia-salud.svg" alt="" width="400" height="225">
+            <div class="noticia-cuerpo">
+              <time datetime="2026-10-22">22 de octubre de 2026</time>
+              <h3>Jornada de vacunación casa a casa en la zona rural</h3>
+              <p>Equipos de la Secretaría de Salud recorrerán 12 veredas durante noviembre. Consulte el cronograma en su junta de acción comunal.</p>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="seccion seccion-alt" id="participa" aria-labelledby="titulo-participa">
+      <div class="contenedor">
+        <div class="banda">
+          <div>
+            <h2 id="titulo-participa">Participa: rendición de cuentas 2026</h2>
+            <p>El 28 de noviembre presentaremos el balance del Plan de Desarrollo. Envíe desde ya sus preguntas y propuestas: cada una queda radicada y recibe respuesta.</p>
+          </div>
+          <a class="boton boton-secundario" href="pqrsd.html?tipo=sugerencia">Enviar una propuesta</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <aside aria-label="Herramientas de accesibilidad">
+  <div class="accesibilidad" role="toolbar" aria-label="Opciones de accesibilidad" aria-orientation="vertical">
+    <button type="button" id="acc-contraste" data-acc="contraste" aria-pressed="false" title="Alto contraste">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9" fill="none" stroke="currentColor" stroke-width="2"/><path d="M12 3a9 9 0 0 1 0 18z" fill="currentColor"/></svg>
+      <span class="visualmente-oculto">Alto contraste</span>
+    </button>
+    <button type="button" data-acc="mas" title="Aumentar texto"><span aria-hidden="true">A+</span><span class="visualmente-oculto">Aumentar tamaño del texto</span></button>
+    <button type="button" data-acc="menos" title="Reducir texto"><span aria-hidden="true">A−</span><span class="visualmente-oculto">Reducir tamaño del texto</span></button>
+    <button type="button" data-acc="restablecer" title="Restablecer">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M3 12a9 9 0 1 0 3-6.7L3 8"/><path d="M3 3v5h5"/></svg>
+      <span class="visualmente-oculto">Restablecer visualización</span>
+    </button>
+  </div>
+  <div id="anuncio-accesibilidad" class="visualmente-oculto" role="status" aria-live="polite"></div>
+  </aside>
+
+  <footer class="pie">
+    <div class="contenedor">
+      <div class="pie-grilla">
+        <section aria-labelledby="pie-entidad">
+          <h2 id="pie-entidad">Alcaldía Municipal de Springfield</h2>
+          <address>
+            Carrera 5 n.º 4-20, Plaza Principal, Springfield (municipio ficticio), Colombia<br>
+            Horario de atención: lunes a viernes, 7:30 a. m. a 12:00 m. y 2:00 p. m. a 5:30 p. m.<br>
+            Conmutador: <a href="tel:+576015550100">(601) 555 0100</a> · Línea gratuita: 01 8000 555 010<br>
+            Correo institucional: <a href="mailto:atencion@springfield.example">atencion@springfield.example</a><br>
+            Notificaciones judiciales: <a href="mailto:notificaciones@springfield.example">notificaciones@springfield.example</a>
+          </address>
+        </section>
+        <section aria-labelledby="pie-mapa">
+          <h2 id="pie-mapa">Mapa del sitio</h2>
+          <ul>
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="transparencia.html">Transparencia y acceso a la información pública</a></li>
+            <li><a href="pqrsd.html">Radicar PQRSD</a></li>
+            <li><a href="accesibilidad.html">Declaración de accesibilidad</a></li>
+          </ul>
+        </section>
+        <section aria-labelledby="pie-politicas">
+          <h2 id="pie-politicas">Políticas</h2>
+          <ul>
+            <li><a href="transparencia.html#datos-personales">Política de tratamiento de datos personales</a></li>
+            <li><a href="transparencia.html#terminos">Términos y condiciones</a></li>
+            <li><a href="accesibilidad.html">Política de accesibilidad</a></li>
+          </ul>
+        </section>
+      </div>
+      <div class="pie-final">
+        <span>Contenido ficticio creado con fines académicos para una demostración de automatización con Make.</span>
+        <span>Última actualización: noviembre de 2026</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="assets/js/sitio.js" defer></script>
+</body>
+</html>

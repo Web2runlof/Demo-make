@@ -1,0 +1,425 @@
+<!doctype html>
+<html lang="es-CO">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Radicar PQRSD | Alcaldía de Springfield</title>
+  <meta name="description" content="Formulario accesible para radicar peticiones, quejas, reclamos, sugerencias y denuncias.">
+  <meta name="robots" content="noindex">
+  <link rel="icon" href="assets/img/escudo.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;800&family=Work+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body>
+  <a class="saltar" href="#contenido">Saltar al contenido principal</a>
+
+  <aside class="barra-demo" aria-label="Aviso del sitio">
+    <div class="contenedor">
+      <span><strong>SITIO DE DEMOSTRACIÓN ACADÉMICA.</strong> Springfield es un municipio ficticio; este portal no pertenece a ninguna entidad pública real.</span>
+      <a href="accesibilidad.html">Accesibilidad</a>
+    </div>
+  </aside>
+
+  <header class="encabezado">
+    <div class="contenedor">
+      <a class="marca" href="index.html">
+        <img src="assets/img/escudo.svg" alt="" width="56" height="65">
+        <span class="marca-texto">
+          <small>Alcaldía Municipal de</small>
+          <span>Springfield</span>
+          <em>Springfield, territorio que avanza · 2024–2027</em>
+        </span>
+      </a>
+      <form class="buscador" id="form-buscar" role="search" action="index.html" method="get">
+        <label class="visualmente-oculto" for="q">Buscar trámites y servicios</label>
+        <input id="q" name="q" type="search" placeholder="Buscar trámites y servicios" autocomplete="off">
+        <button type="submit">Buscar</button>
+      </form>
+    </div>
+  </header>
+
+  <nav class="menu" aria-label="Menú principal">
+    <div class="contenedor">
+      <button class="menu-boton" type="button" aria-expanded="false" aria-controls="menu-principal">
+        <span aria-hidden="true">☰</span> Menú
+      </button>
+      <ul id="menu-principal">
+          <li><a href="index.html">Inicio</a></li>
+          <li><a href="index.html#municipio">Nuestro municipio</a></li>
+          <li><a href="transparencia.html">Transparencia y acceso a la información pública</a></li>
+          <li><a href="pqrsd.html" aria-current="page">Atención y servicios a la ciudadanía</a></li>
+          <li><a href="index.html#participa">Participa</a></li>
+          <li><a href="index.html#noticias">Noticias</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <nav class="migas" aria-label="Ruta de navegación">
+    <div class="contenedor"><ol><li><a href="index.html">Inicio</a></li><li><a href="pqrsd.html">Atención y servicios a la ciudadanía</a></li><li><span aria-current="page">Radicar PQRSD</span></li></ol></div>
+  </nav>
+
+  <main id="contenido" tabindex="-1">
+    <div class="cabecera-pagina">
+      <div class="contenedor">
+        <h1 id="titulo-formulario" tabindex="-1">Radicar una PQRSD</h1>
+        <p>Peticiones, quejas, reclamos, sugerencias y denuncias. Le tomará unos 5 minutos. Los campos marcados con <span class="obligatorio" aria-hidden="true">*</span> son obligatorios. Puede ampliar el texto o activar el alto contraste con la barra de accesibilidad.</p>
+      </div>
+    </div>
+
+    <div class="seccion">
+      <div class="contenedor pqrsd-diseno">
+        <div>
+          <div id="resumen-errores" class="resumen-errores" tabindex="-1" hidden aria-labelledby="titulo-errores">
+            <h2 id="titulo-errores">Hay datos por corregir</h2>
+            <p>Seleccione cada error para ir directamente al campo.</p>
+            <ul id="lista-errores"></ul>
+          </div>
+
+          <form id="form-pqrsd" class="formulario" novalidate aria-labelledby="titulo-formulario">
+
+            <fieldset id="grupo-tipo">
+              <legend><span class="paso" aria-hidden="true">1</span>¿Qué tipo de solicitud quiere presentar? <span class="obligatorio" aria-hidden="true">*</span><span class="visualmente-oculto">(obligatorio)</span></legend>
+              <p class="mensaje-error" id="error-tipo_solicitud" hidden></p>
+              <div class="opciones">
+              <div class="opcion">
+                <input type="radio" id="tipo-peticion" name="tipo_solicitud" value="peticion" required aria-describedby="error-tipo_solicitud">
+                <label for="tipo-peticion"><strong>Petición</strong><span>Solicitar algo a la Alcaldía: un servicio, una actuación o un documento.</span></label>
+              </div>
+              <div class="opcion">
+                <input type="radio" id="tipo-queja" name="tipo_solicitud" value="queja" required aria-describedby="error-tipo_solicitud">
+                <label for="tipo-queja"><strong>Queja</strong><span>Inconformidad con la atención o la conducta de un servidor público.</span></label>
+              </div>
+              <div class="opcion">
+                <input type="radio" id="tipo-reclamo" name="tipo_solicitud" value="reclamo" required aria-describedby="error-tipo_solicitud">
+                <label for="tipo-reclamo"><strong>Reclamo</strong><span>Inconformidad con un servicio que no se prestó o se prestó mal.</span></label>
+              </div>
+              <div class="opcion">
+                <input type="radio" id="tipo-sugerencia" name="tipo_solicitud" value="sugerencia" required aria-describedby="error-tipo_solicitud">
+                <label for="tipo-sugerencia"><strong>Sugerencia</strong><span>Una idea o propuesta para mejorar un servicio o un proceso.</span></label>
+              </div>
+              <div class="opcion">
+                <input type="radio" id="tipo-denuncia" name="tipo_solicitud" value="denuncia" required aria-describedby="error-tipo_solicitud">
+                <label for="tipo-denuncia"><strong>Denuncia</strong><span>Poner en conocimiento hechos irregulares o de posible corrupción.</span></label>
+              </div>
+              <div class="opcion">
+                <input type="radio" id="tipo-informacion" name="tipo_solicitud" value="informacion" required aria-describedby="error-tipo_solicitud">
+                <label for="tipo-informacion"><strong>Información pública</strong><span>Pedir datos o documentos que tenga la entidad (Ley 1712 de 2014).</span></label>
+              </div>
+              <div class="opcion">
+                <input type="radio" id="tipo-consulta" name="tipo_solicitud" value="consulta" required aria-describedby="error-tipo_solicitud">
+                <label for="tipo-consulta"><strong>Consulta</strong><span>Pedir un concepto u orientación sobre temas de la Alcaldía.</span></label>
+              </div>
+              </div>
+              <p class="plazo" id="plazo-info" role="status" aria-live="polite" hidden></p>
+            </fieldset>
+
+            <fieldset id="grupo-modalidad">
+              <legend><span class="paso" aria-hidden="true">2</span>¿Cómo quiere radicar? <span class="obligatorio" aria-hidden="true">*</span><span class="visualmente-oculto">(obligatorio)</span></legend>
+              <p class="mensaje-error" id="error-modalidad" hidden></p>
+              <div class="opciones dos">
+              <div class="opcion">
+                <input type="radio" id="modalidad-identificada" name="modalidad" value="identificada" checked required aria-describedby="error-modalidad">
+                <label for="modalidad-identificada"><strong>Con mis datos</strong><span>Recibirá la respuesta por correo o correspondencia y podrá hacer seguimiento.</span></label>
+              </div>
+              <div class="opcion">
+                <input type="radio" id="modalidad-anonima" name="modalidad" value="anonima" required aria-describedby="error-modalidad">
+                <label for="modalidad-anonima"><strong>De forma anónima</strong><span>No registraremos su nombre ni su documento; solo un correo para enviarle el radicado.</span></label>
+              </div>
+              </div>
+            </fieldset>
+
+            <fieldset id="bloque-personal">
+              <legend><span class="paso" aria-hidden="true">3</span>Sus datos</legend>
+              <p class="ayuda-bloque">Los usamos únicamente para tramitar y responder su solicitud.</p>
+
+              <fieldset id="grupo-persona" style="border:0;padding:0;margin:0 0 18px">
+                <legend class="grupo-titulo" style="font-family:inherit;font-size:1rem;font-weight:700;color:inherit">Tipo de persona <span class="obligatorio" aria-hidden="true">*</span><span class="visualmente-oculto">(obligatorio)</span></legend>
+                <p class="mensaje-error" id="error-tipo_persona" hidden></p>
+                <div class="opciones dos" style="margin-top:8px">
+              <div class="opcion">
+                <input type="radio" id="persona-natural" name="tipo_persona" value="natural" checked required aria-describedby="error-tipo_persona">
+                <label for="persona-natural"><strong>Persona natural</strong><span>Un ciudadano o ciudadana.</span></label>
+              </div>
+              <div class="opcion">
+                <input type="radio" id="persona-juridica" name="tipo_persona" value="juridica" required aria-describedby="error-tipo_persona">
+                <label for="persona-juridica"><strong>Persona jurídica</strong><span>Una empresa, fundación, junta u organización.</span></label>
+              </div>
+                </div>
+              </fieldset>
+
+              <div class="campo" id="campo-razon-social" hidden>
+                <label for="razon-social">Razón social <span class="obligatorio" aria-hidden="true">*</span></label>
+                <input type="text" id="razon-social" name="razon_social" autocomplete="organization" required aria-describedby="error-razon_social">
+                <p class="mensaje-error" id="error-razon_social" hidden></p>
+              </div>
+
+              <div class="fila">
+                <div class="campo">
+                  <label for="tipo-documento">Tipo de documento <span class="obligatorio" aria-hidden="true">*</span></label>
+                  <select id="tipo-documento" name="tipo_documento" required aria-describedby="error-tipo_documento">
+                    <option value="">Seleccione una opción</option>
+                    <option value="CC">Cédula de ciudadanía</option>
+                    <option value="CE">Cédula de extranjería</option>
+                    <option value="TI">Tarjeta de identidad</option>
+                    <option value="PPT">Permiso por Protección Temporal</option>
+                    <option value="PA">Pasaporte</option>
+                    <option value="NIT">NIT</option>
+                  </select>
+                  <p class="mensaje-error" id="error-tipo_documento" hidden></p>
+                </div>
+                <div class="campo">
+                  <label for="numero-documento">Número de documento <span class="obligatorio" aria-hidden="true">*</span></label>
+                  <input type="text" id="numero-documento" name="numero_documento" inputmode="numeric" autocomplete="off" required aria-describedby="ayuda-documento error-numero_documento">
+                  <p class="ayuda" id="ayuda-documento">Sin puntos ni espacios. Ejemplo: 1012345678</p>
+                  <p class="mensaje-error" id="error-numero_documento" hidden></p>
+                </div>
+              </div>
+
+              <div class="fila">
+                <div class="campo">
+                  <label for="nombres" id="etiqueta-nombres">Nombres <span class="obligatorio" aria-hidden="true">*</span></label>
+                  <input type="text" id="nombres" name="nombres" autocomplete="given-name" required aria-describedby="error-nombres">
+                  <p class="mensaje-error" id="error-nombres" hidden></p>
+                </div>
+                <div class="campo" id="campo-apellidos">
+                  <label for="apellidos">Apellidos <span class="obligatorio" aria-hidden="true">*</span></label>
+                  <input type="text" id="apellidos" name="apellidos" autocomplete="family-name" required aria-describedby="error-apellidos">
+                  <p class="mensaje-error" id="error-apellidos" hidden></p>
+                </div>
+              </div>
+
+              <div class="campo">
+                <label for="telefono">Teléfono o celular <span class="opcional">(opcional)</span></label>
+                <input type="tel" id="telefono" name="telefono" autocomplete="tel" inputmode="tel" aria-describedby="ayuda-telefono error-telefono">
+                <p class="ayuda" id="ayuda-telefono">Ejemplo: 3001234567</p>
+                <p class="mensaje-error" id="error-telefono" hidden></p>
+              </div>
+            </fieldset>
+
+            <fieldset id="grupo-contacto">
+              <legend><span class="paso" aria-hidden="true">4</span>Contacto y respuesta</legend>
+              <p class="aviso-modo" id="nota-anonimo" hidden>Eligió radicar de forma anónima: su nombre y documento no se registrarán. Igual necesitamos un correo, porque allí le llega el número de radicado y el enlace para consultar su solicitud. Puede usar un correo que no lo identifique.</p>
+
+              <div class="campo">
+                <label for="correo">Correo electrónico <span class="obligatorio" aria-hidden="true">*</span></label>
+                <input type="email" id="correo" name="correo" autocomplete="email" required aria-describedby="ayuda-correo error-correo">
+                <p class="ayuda" id="ayuda-correo">Allí le llegarán el número de radicado y el enlace de consulta. Ejemplo: nombre@correo.com</p>
+                <p class="mensaje-error" id="error-correo" hidden></p>
+              </div>
+
+              <div id="bloque-medio">
+                <fieldset id="grupo-medio" style="border:0;padding:0;margin:0 0 18px">
+                  <legend class="grupo-titulo" style="font-family:inherit;font-size:1rem;font-weight:700;color:inherit">¿Cómo quiere recibir la respuesta? <span class="obligatorio" aria-hidden="true">*</span><span class="visualmente-oculto">(obligatorio)</span></legend>
+                  <p class="mensaje-error" id="error-medio_respuesta" hidden></p>
+                  <div class="opciones dos" style="margin-top:8px">
+              <div class="opcion">
+                <input type="radio" id="medio-correo" name="medio_respuesta" value="correo" checked required aria-describedby="error-medio_respuesta">
+                <label for="medio-correo"><strong>Correo electrónico</strong><span>Es el medio más rápido.</span></label>
+              </div>
+              <div class="opcion">
+                <input type="radio" id="medio-fisica" name="medio_respuesta" value="fisica" required aria-describedby="error-medio_respuesta">
+                <label for="medio-fisica"><strong>Correspondencia física</strong><span>La enviamos a la dirección que indique.</span></label>
+              </div>
+                  </div>
+                </fieldset>
+                <div class="campo">
+                  <label for="direccion">Dirección de correspondencia <span class="obligatorio" id="marca-direccion" aria-hidden="true" hidden>*</span><span class="opcional" id="opcional-direccion">(opcional)</span></label>
+                  <input type="text" id="direccion" name="direccion" autocomplete="street-address" aria-describedby="error-direccion">
+                  <p class="mensaje-error" id="error-direccion" hidden></p>
+                </div>
+              </div>
+
+              <div class="campo">
+                <label for="ajuste-razonable">¿Necesita la respuesta en un formato accesible? <span class="opcional">(opcional)</span></label>
+                <select id="ajuste-razonable" name="ajuste_razonable" aria-describedby="ayuda-ajuste">
+                  <option value="ninguno">No lo necesito</option>
+                  <option value="letra_grande">Letra grande</option>
+                  <option value="audio">Audio</option>
+                  <option value="lsc">Video en Lengua de Señas Colombiana</option>
+                  <option value="braille">Braille</option>
+                  <option value="lectura_facil">Lectura fácil</option>
+                  <option value="lengua_nativa">Lengua nativa o indígena</option>
+                </select>
+                <p class="ayuda" id="ayuda-ajuste">Es un ajuste razonable para que la respuesta le resulte accesible.</p>
+              </div>
+            </fieldset>
+
+            <fieldset id="grupo-solicitud">
+              <legend><span class="paso" aria-hidden="true">5</span>Su solicitud</legend>
+
+              <div class="campo">
+                <label for="dependencia">¿A qué dependencia va dirigida? <span class="obligatorio" aria-hidden="true">*</span></label>
+                <select id="dependencia" name="dependencia" required aria-describedby="error-dependencia">
+                  <option value="">Seleccione una opción</option>
+                  <option value="despacho">Despacho del Alcalde</option>
+                  <option value="gobierno">Secretaría de Gobierno y Convivencia</option>
+                  <option value="hacienda">Secretaría de Hacienda</option>
+                  <option value="planeacion">Secretaría de Planeación e Infraestructura</option>
+                  <option value="salud">Secretaría de Salud</option>
+                  <option value="educacion">Secretaría de Educación</option>
+                  <option value="movilidad">Secretaría de Movilidad</option>
+                  <option value="ambiente">Secretaría de Ambiente y Desarrollo Rural</option>
+                  <option value="social">Secretaría de Desarrollo Social</option>
+                  <option value="no_se">No sé a qué dependencia dirigirla</option>
+                </select>
+                <p class="mensaje-error" id="error-dependencia" hidden></p>
+              </div>
+
+              <div class="campo">
+                <label for="asunto">Asunto <span class="obligatorio" aria-hidden="true">*</span></label>
+                <input type="text" id="asunto" name="asunto" maxlength="120" required aria-describedby="ayuda-asunto error-asunto">
+                <p class="ayuda" id="ayuda-asunto">Resuma su solicitud en una frase. Ejemplo: Daño en el alumbrado público de la calle 8.</p>
+                <p class="mensaje-error" id="error-asunto" hidden></p>
+              </div>
+
+              <div class="campo">
+                <label for="descripcion">Descripción <span class="obligatorio" aria-hidden="true">*</span></label>
+                <textarea id="descripcion" name="descripcion" maxlength="3000" required aria-describedby="ayuda-descripcion error-descripcion"></textarea>
+                <p class="ayuda" id="ayuda-descripcion">Cuente qué pasó, dónde y desde cuándo, y qué espera que haga la Alcaldía. Máximo 3.000 caracteres.</p>
+                <p class="contador" id="contador-descripcion" aria-hidden="true">0 de 3000 caracteres</p>
+                <p class="visualmente-oculto" id="anuncio-contador" aria-live="polite"></p>
+                <p class="mensaje-error" id="error-descripcion" hidden></p>
+              </div>
+
+              <div class="campo">
+                <label for="archivos">Archivos de soporte <span class="opcional">(opcional)</span></label>
+                <input type="file" id="archivos" name="archivos" multiple accept=".pdf,.jpg,.jpeg,.png,application/pdf,image/jpeg,image/png" aria-describedby="ayuda-archivos error-archivos">
+                <p class="ayuda" id="ayuda-archivos">Hasta 3 archivos PDF, JPG o PNG; entre todos, máximo 4 MB. Se guardan junto con su radicado.</p>
+                <p class="mensaje-error" id="error-archivos" hidden></p>
+              </div>
+            </fieldset>
+
+            <fieldset id="grupo-autorizacion">
+              <legend><span class="paso" aria-hidden="true">6</span>Autorización</legend>
+              <div class="casilla">
+                <input type="checkbox" id="autorizacion" name="autorizacion" value="si" required aria-describedby="error-autorizacion">
+                <label for="autorizacion">Autorizo a la Alcaldía de Springfield a tratar mis datos personales para tramitar y responder esta solicitud, según la <a href="transparencia.html#datos-personales" target="_blank" rel="noopener">política de tratamiento de datos personales (se abre en una pestaña nueva)</a> y la Ley 1581 de 2012. <span class="obligatorio" aria-hidden="true">*</span></label>
+              </div>
+              <p class="mensaje-error" id="error-autorizacion" hidden></p>
+            </fieldset>
+
+            <div class="campo-trampa" aria-hidden="true">
+              <label for="sitio-web">No llene este campo</label>
+              <input type="text" id="sitio-web" name="sitio_web" tabindex="-1" autocomplete="off">
+            </div>
+
+            <div id="error-envio" class="aviso-error" role="alert" hidden></div>
+
+            <div class="envio">
+              <button type="submit" class="boton boton-primario" id="boton-enviar">Radicar solicitud</button>
+              <span class="estado-envio" id="estado-envio" role="status" aria-live="polite"></span>
+            </div>
+          </form>
+
+          <section id="confirmacion" class="confirmacion" hidden aria-labelledby="conf-titulo">
+            <h2 id="conf-titulo" tabindex="-1">Su solicitud fue radicada</h2>
+            <p id="conf-intro">Guarde este número. Con él puede hacer seguimiento a su solicitud:</p>
+            <p class="radicado" id="conf-radicado"></p>
+            <p class="aviso-modo" id="conf-aviso" hidden></p>
+            <dl id="conf-detalle"></dl>
+            <p>También le enviamos un correo con el número de radicado y el enlace para consultar el estado de su solicitud.</p>
+            <div class="acciones no-imprimir">
+              <button type="button" class="boton boton-primario" id="boton-imprimir">Imprimir o guardar constancia</button>
+              <button type="button" class="boton boton-secundario" id="boton-nueva">Radicar otra solicitud</button>
+            </div>
+            <details class="carga-util no-imprimir">
+              <summary>Ver los datos enviados a Make (para la clase)</summary>
+              <pre id="conf-json"></pre>
+              <p><strong>Respuesta del webhook:</strong></p>
+              <pre id="conf-respuesta"></pre>
+            </details>
+          </section>
+        </div>
+
+        <aside class="lateral" aria-label="Información de apoyo">
+          <section class="caja-info" aria-labelledby="lat-antes">
+            <h2 id="lat-antes">Antes de empezar</h2>
+            <ul>
+              <li>Tenga a mano su documento de identidad.</li>
+              <li>Si tiene soportes, escanéelos o tómeles una foto.</li>
+              <li>No hay límite de tiempo: puede llenar el formulario con calma.</li>
+            </ul>
+          </section>
+          <section class="caja-info" aria-labelledby="lat-plazos">
+            <h2 id="lat-plazos">Plazos de respuesta</h2>
+            <dl>
+              <dt>15 días</dt><dd>Peticiones, quejas, reclamos, sugerencias y denuncias</dd>
+              <dt>10 días</dt><dd>Solicitudes de información o documentos</dd>
+              <dt>30 días</dt><dd>Consultas</dd>
+            </dl>
+            <p class="ayuda" style="margin-top:8px">Días hábiles, según la Ley 1755 de 2015.</p>
+          </section>
+          <section class="caja-info" aria-labelledby="lat-canales">
+            <h2 id="lat-canales">Otros canales</h2>
+            <ul>
+              <li>Presencial: ventanilla única, Carrera 5 n.º 4-20.</li>
+              <li>Teléfono: <a href="tel:+576015550100">(601) 555 0100</a></li>
+              <li>Línea gratuita: 01 8000 555 010</li>
+            </ul>
+          </section>
+        </aside>
+      </div>
+    </div>
+  </main>
+
+  <aside aria-label="Herramientas de accesibilidad">
+  <div class="accesibilidad" role="toolbar" aria-label="Opciones de accesibilidad" aria-orientation="vertical">
+    <button type="button" id="acc-contraste" data-acc="contraste" aria-pressed="false" title="Alto contraste">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9" fill="none" stroke="currentColor" stroke-width="2"/><path d="M12 3a9 9 0 0 1 0 18z" fill="currentColor"/></svg>
+      <span class="visualmente-oculto">Alto contraste</span>
+    </button>
+    <button type="button" data-acc="mas" title="Aumentar texto"><span aria-hidden="true">A+</span><span class="visualmente-oculto">Aumentar tamaño del texto</span></button>
+    <button type="button" data-acc="menos" title="Reducir texto"><span aria-hidden="true">A−</span><span class="visualmente-oculto">Reducir tamaño del texto</span></button>
+    <button type="button" data-acc="restablecer" title="Restablecer">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M3 12a9 9 0 1 0 3-6.7L3 8"/><path d="M3 3v5h5"/></svg>
+      <span class="visualmente-oculto">Restablecer visualización</span>
+    </button>
+  </div>
+  <div id="anuncio-accesibilidad" class="visualmente-oculto" role="status" aria-live="polite"></div>
+  </aside>
+
+  <footer class="pie">
+    <div class="contenedor">
+      <div class="pie-grilla">
+        <section aria-labelledby="pie-entidad">
+          <h2 id="pie-entidad">Alcaldía Municipal de Springfield</h2>
+          <address>
+            Carrera 5 n.º 4-20, Plaza Principal, Springfield (municipio ficticio), Colombia<br>
+            Horario de atención: lunes a viernes, 7:30 a. m. a 12:00 m. y 2:00 p. m. a 5:30 p. m.<br>
+            Conmutador: <a href="tel:+576015550100">(601) 555 0100</a> · Línea gratuita: 01 8000 555 010<br>
+            Correo institucional: <a href="mailto:atencion@springfield.example">atencion@springfield.example</a><br>
+            Notificaciones judiciales: <a href="mailto:notificaciones@springfield.example">notificaciones@springfield.example</a>
+          </address>
+        </section>
+        <section aria-labelledby="pie-mapa">
+          <h2 id="pie-mapa">Mapa del sitio</h2>
+          <ul>
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="transparencia.html">Transparencia y acceso a la información pública</a></li>
+            <li><a href="pqrsd.html">Radicar PQRSD</a></li>
+            <li><a href="accesibilidad.html">Declaración de accesibilidad</a></li>
+          </ul>
+        </section>
+        <section aria-labelledby="pie-politicas">
+          <h2 id="pie-politicas">Políticas</h2>
+          <ul>
+            <li><a href="transparencia.html#datos-personales">Política de tratamiento de datos personales</a></li>
+            <li><a href="transparencia.html#terminos">Términos y condiciones</a></li>
+            <li><a href="accesibilidad.html">Política de accesibilidad</a></li>
+          </ul>
+        </section>
+      </div>
+      <div class="pie-final">
+        <span>Contenido ficticio creado con fines académicos para una demostración de automatización con Make.</span>
+        <span>Última actualización: noviembre de 2026</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="assets/js/sitio.js" defer></script>
+  <script src="assets/js/config.js"></script>
+  <script src="assets/js/pqrsd.js" defer></script>
+</body>
+</html>

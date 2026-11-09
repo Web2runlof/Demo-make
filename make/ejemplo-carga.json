@@ -1,0 +1,25 @@
+{
+  "nombres_apellidos": "Ana María Pérez Gómez",
+  "correo": "ana@correo.com",
+  "telefono": "3001234567",
+  "asunto": "Reclamo · Hueco en la vía principal",
+  "descripcion": "En la carrera 5 frente al parque hay un hueco grande que ya causó dos accidentes de motos.",
+  "resumen_base": "En la carrera 5 frente al parque hay un hueco grande que ya causó dos accidentes de motos.",
+  "archivos": [
+    { "name": "foto-hueco.jpg", "mime": "image/jpeg", "data": "(binario)" }
+  ],
+
+  "tipo_solicitud": "Reclamo",
+  "anonimo": "no",
+  "tipo_persona": "natural",
+  "tipo_documento": "CC",
+  "numero_documento": "1012345678",
+  "direccion": "",
+  "medio_respuesta": "correo",
+  "dependencia": "Secretaría de Planeación e Infraestructura",
+  "ajuste_razonable": "ninguno",
+  "plazo_dias_habiles": "15",
+  "fecha_vencimiento": "2026-12-01",
+  "autoriza_tratamiento_datos": "si",
+  "origen": "web-alcaldia-springfield"
+}

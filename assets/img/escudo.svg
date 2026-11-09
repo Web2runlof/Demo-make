@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 140" role="img" aria-labelledby="t">
+  <title id="t">Escudo del municipio de Springfield</title>
+  <defs>
+    <clipPath id="sh"><path d="M10 10h100v58c0 30-22 50-50 62C32 118 10 98 10 68z"/></clipPath>
+  </defs>
+  <path d="M6 6h108v62c0 33-24 55-54 68C30 123 6 101 6 68z" fill="#C9A227"/>
+  <g clip-path="url(#sh)">
+    <rect x="0" y="0" width="120" height="140" fill="#1F5FA8"/>
+    <circle cx="60" cy="40" r="13" fill="#F2C94C"/>
+    <g stroke="#F2C94C" stroke-width="3" stroke-linecap="round">
+      <path d="M60 18v-6M42 26l-4-4M78 26l4-4M36 40h-6M84 40h6"/>
+    </g>
+    <path d="M0 74 28 46l16 14 16-20 22 24 14-12 24 22v30H0z" fill="#2E7D4F"/>
+    <path d="M0 84 30 62l20 12 18-10 22 12 30-14v78H0z" fill="#1B5E3A"/>
+    <path d="M0 98c20-8 40 8 60 0s40 8 60 0v42H0z" fill="#8EC5FF"/>
+    <path d="M0 106c20-8 40 8 60 0s40 8 60 0" fill="none" stroke="#fff" stroke-width="3"/>
+    <path d="M0 116c20-8 40 8 60 0s40 8 60 0v24H0z" fill="#C9A227"/>
+  </g>
+  <path d="M10 10h100v58c0 30-22 50-50 62C32 118 10 98 10 68z" fill="none" stroke="#7A5C00" stroke-width="2"/>
+</svg>
